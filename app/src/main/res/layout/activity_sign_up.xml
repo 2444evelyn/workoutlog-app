@@ -17,14 +17,14 @@
         android:id="@+id/tilFirstname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgFN2"
         app:layout_constraintTop_toTopOf="@+id/guideline3">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="etFirst"
+            android:id="@+id/etFirstname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="FirstName" />
@@ -35,15 +35,15 @@
         android:id="@+id/tilLastname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:layout_marginStart="34dp"
         android:layout_marginEnd="34dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgFN"
         app:layout_constraintTop_toBottomOf="@+id/tilFirstname">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etName"
+            android:id="@+id/etlastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="LastName" />
@@ -51,18 +51,18 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilEmail2"
+        android:id="@+id/tilEmailsign"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="34dp"
         android:layout_marginEnd="34dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgEmail"
         app:layout_constraintTop_toBottomOf="@+id/tilLastname">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etemail2"
+            android:id="@+id/etEmailsignup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -71,19 +71,21 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tillPassword2"
+        android:id="@+id/tilPasswordSignup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="34dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/tilConfirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilEmail2"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmailsign"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword2"
+            android:id="@+id/etPasswordsign"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -99,7 +101,7 @@
         android:layout_marginEnd="34dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tillPassword2"
+        app:layout_constraintTop_toBottomOf="@+id/tilPasswordSignup"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -113,20 +115,26 @@
         android:id="@+id/btnSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="158dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="158dp"
+        android:layout_marginBottom="24dp"
         android:text="SignUp"
+        app:layout_constraintBottom_toTopOf="@+id/tvLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilConfirm" />
 
     <TextView
-        android:id="@+id/tvlogin"
+        android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="58dp"
         android:text="Have an account?Login"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,30 +144,36 @@
         android:id="@+id/imgFN2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_baseline_person_pin_24"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="166dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tilFirstname"
+        app:layout_constraintEnd_toStartOf="@+id/tilFirstname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tilFirstname"
+        app:srcCompat="@drawable/ic_baseline_person_pin_24" />
 
     <ImageView
         android:id="@+id/imgFN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="320dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tilLastname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_person_pin_24"
-        tools:layout_editor_absoluteY="254dp" />
+        app:layout_constraintTop_toTopOf="@+id/tilLastname"
+        app:srcCompat="@drawable/ic_baseline_person_pin_24" />
 
     <ImageView
         android:id="@+id/imgEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="@+id/tilEmailsign"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_email_24"
-        tools:layout_editor_absoluteY="339dp" />
+        app:layout_constraintTop_toTopOf="@+id/tilEmailsign"
+        app:srcCompat="@drawable/ic_baseline_email_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
