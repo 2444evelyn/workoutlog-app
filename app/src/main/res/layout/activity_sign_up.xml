@@ -21,13 +21,15 @@
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgFN2"
-        app:layout_constraintTop_toTopOf="@+id/guideline3">
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etFirstname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="FirstName" />
+            android:hint="FirstName"
+            android:inputType="textPersonName" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,13 +42,15 @@
         android:layout_marginEnd="34dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgFN"
-        app:layout_constraintTop_toBottomOf="@+id/tilFirstname">
+        app:layout_constraintTop_toBottomOf="@+id/tilFirstname"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etlastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="LastName" />
+            android:hint="LastName"
+            android:inputType="textPersonName|textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,7 +63,8 @@
         android:layout_marginEnd="34dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgEmail"
-        app:layout_constraintTop_toBottomOf="@+id/tilLastname">
+        app:layout_constraintTop_toBottomOf="@+id/tilLastname"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmailsignup"
@@ -82,7 +87,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilEmailsign"
-        app:passwordToggleEnabled="true">
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPasswordsign"
@@ -102,13 +108,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilPasswordSignup"
-        app:passwordToggleEnabled="true">
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etConfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm" />
+            android:hint="Confirm"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
