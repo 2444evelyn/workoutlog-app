@@ -3,10 +3,12 @@ package com.tsuma.workoutlog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import java.util.regex.Pattern
 
 class SignUpActivity : AppCompatActivity() {
     lateinit var btnSignUp: Button
@@ -73,6 +75,12 @@ class SignUpActivity : AppCompatActivity() {
         if (email.isBlank()) {
             tilEmailsign.error = "Email is required"
             error = true
+
+        }
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            tilEmailsign.error = "Email address is invalid "
+            error = true
+
         }
         var password= etPasswordsign.text.toString()
         if (password.isBlank()) {
@@ -82,14 +90,20 @@ class SignUpActivity : AppCompatActivity() {
         if (error != true) {
         }
         var confirm = etConfirm.text.toString()
-        if (confirm.isBlank()) {
+        if (confirm.isBlank()){
             tilConfirm.error = "Confirm  is required"
             error = true
         }
         if (error  !=true) {
 
         }
+        if (password != confirm){
+            tilConfirm.error = "incorrect"
+            error = true
+        }
+        if (error  !=true) {
 
         }
 
     }
+}
