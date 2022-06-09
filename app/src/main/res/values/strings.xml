@@ -4,4 +4,9 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="Sign_Up">dont have an account? <u>Sign_up</u></string>
+    <string name="profile">profile</string>
+    <string name="track">track</string>
+    <string name="plan">plan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

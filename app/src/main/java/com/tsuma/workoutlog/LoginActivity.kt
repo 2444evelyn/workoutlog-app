@@ -25,7 +25,10 @@ class LoginActivity : AppCompatActivity() {
         etPassword=findViewById(R.id.etPassword)
         tvSignUp=findViewById(R.id.tvSignUp)
 
-        btnLogin.setOnClickListener { validate() }
+        btnLogin.setOnClickListener {
+            validate()
+            startActivity(Intent(this,Home_pageActivity::class.java))
+        }
 
         tvSignUp.setOnClickListener {
             var intent=Intent(this,SignUpActivity::class.java)
