@@ -18,6 +18,9 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        castView()
+    }
+        fun castView(){
         btnLogin = findViewById(R.id.btnLogin)
         tilEmail = findViewById(R.id.tilEmail)
         etEmail=findViewById(R.id.etEmail)
